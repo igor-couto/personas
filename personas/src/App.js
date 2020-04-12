@@ -1,24 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useEffect, useState} from 'react';
+import Person from './Person';
 import './App.css';
 
-function App() {
-  return (
+const App = () => 
+{
+
+  const [people, setPerson] = useState([]);
+
+  const exampleRequest = "https://randomuser.me/api/?results=10";
+
+  useEffect( () => {
+    getFaces();
+  }, []);
+
+  const getFaces = async () => {
+    const response = await fetch(exampleRequest, {method: 'GET'} );
+    const data = await response.json();
+
+    console.log(data.results);
+
+    setPerson(data.results);
+  };
+
+  return(
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <form className="search-form">
+        <input className="seach-bar" type="text"/>
+        <button className="seach-buttom" type="submit">Search</button>
+      </form>
+      {people.map( person => (
+        <Person 
+          key = {person.name.first + person.name.last}
+          name = {person.name.first}
+          lastname = {person.name.last}
+        />
+      ))}
     </div>
   );
 }
