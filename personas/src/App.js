@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import Person from './Person';
 import './App.css';
+import SearchIcon from './search-icon.svg';
 
 const App = () => 
 {
@@ -15,13 +16,14 @@ const App = () =>
 
   const getPeople = async () => {
 
-    const responsePeople = await fetch("https://randomuser.me/api/?results=10", {method: 'GET'} );
+    const responsePeople = await fetch("https://randomuser.me/api/?results=10&inc=gender,name,nat,location", {method: 'GET'} );
     const dataPeople = await responsePeople.json();
 
     dataPeople.results.map( person => {
       const completeName = person.name.first + ' ' + person.name.last;
       person.photo = `https://avatars.dicebear.com/v2/${person.gender}/${completeName}.svg?options[background][]=%2368e877`;
 
+      person.flag = `https://hatscripts.github.io/circle-flags/flags/${person.nat.toLowerCase()}.svg`;
       //?options[background][]=%23d92518 red
       //?options[background][]=%2368e877 green
       //?options[background][]=%23e6e66e yellow
@@ -60,7 +62,7 @@ const App = () =>
   return(
     <div className="App">
       <form className="search-form">
-        <input className="search-bar" type="text" value={search} onChange={updateSearch}/>
+          <input className="search-bar" type="text" value={search} onChange={updateSearch} placeholder="Search someone"/>
       </form>
       <div className = "person">
       {showingPeople.map( person => (
@@ -73,6 +75,9 @@ const App = () =>
           photo = {person.photo}
           wondering = {person.wondering}
           feelLike = {person.feelLike}
+          flag = {person.flag}
+          state = {person.location.state}
+          city = {person.location.city}
         />
       ))}
       </div>
