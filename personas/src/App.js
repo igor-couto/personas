@@ -52,6 +52,8 @@ const App = () =>
           key = {person.name.first + person.name.last}
           name = {person.name.first}
           lastname = {person.name.last}
+          gender = {person.gender}
+          origin = {person.location.country}
         />
       ))}
     </div>
