@@ -17,20 +17,25 @@ const App = () =>
 
     const responsePeople = await fetch("https://randomuser.me/api/?results=10", {method: 'GET'} );
     const dataPeople = await responsePeople.json();
-    setPeople(dataPeople.results);
-    setShowingPeople(dataPeople.results);
 
-    for(const person of dataPeople.results)
-    {
+    dataPeople.results.map( person => {
       const completeName = person.name.first + ' ' + person.name.last;
+      person.photo = `https://avatars.dicebear.com/v2/${person.gender}/${completeName}.svg?options[background][]=%2368e877`;
 
+      //?options[background][]=%23d92518 red
+      //?options[background][]=%2368e877 green
+      //?options[background][]=%23e6e66e yellow
+    });
+
+    for(const person of dataPeople.results){
       const responseWondering = await fetch("https://www.boredapi.com/api/activity/");
       const dataWondering = await responseWondering.json();
       person.wondering = dataWondering.activity;
       person.feelLike = dataWondering.type;
-
-      person.photo = `https://avatars.dicebear.com/v2/${person.gender}/${completeName}.svg`;
     }
+
+    setPeople(dataPeople.results);
+    setShowingPeople(dataPeople.results);
 
     console.log(dataPeople.results);
   };
