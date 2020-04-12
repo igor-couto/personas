@@ -14,11 +14,23 @@ const App = () =>
   }, []);
 
   const getPeople = async () => {
+
     const responsePeople = await fetch("https://randomuser.me/api/?results=10", {method: 'GET'} );
     const dataPeople = await responsePeople.json();
     setPeople(dataPeople.results);
     setShowingPeople(dataPeople.results);
 
+    for(const person of dataPeople.results)
+    {
+      const completeName = person.name.first + ' ' + person.name.last;
+
+      const responseWondering = await fetch("https://www.boredapi.com/api/activity/");
+      const dataWondering = await responseWondering.json();
+      person.wondering = dataWondering.activity;
+      person.feelLike = dataWondering.type;
+
+      person.photo = `https://avatars.dicebear.com/v2/${person.gender}/${completeName}.svg`;
+    }
 
     console.log(dataPeople.results);
   };
@@ -53,7 +65,9 @@ const App = () =>
           lastname = {person.name.last}
           gender = {person.gender}
           origin = {person.location.country}
-          photo = "aa"
+          photo = {person.photo}
+          wondering = {person.wondering}
+          feelLike = {person.feelLike}
         />
       ))}
       </div>
