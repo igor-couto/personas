@@ -11,11 +11,6 @@
     min-width: 40%;
 }
 
-.emb{
-    margin-top: 10px;
-    border-radius: 40%;
-}
-
 h1 {
     color: #202124;
 }
@@ -24,8 +19,26 @@ p {
     margin: 8px 8px;
 }
 
-.photo{
+.photo {
     margin-top: 30px;
     font-size: 0;
     box-shadow: 0px 5px 20px rgb(182, 182, 182);
+}
+
+.location {
+    border: 1px solid #ccc!important;
+    border-radius: 16px;
+    padding: 0.01em 16px;
+}
+
+.origininfo {
+    position: relative;
+    top: -10px;
+}
+
+.flag {
+    position: relative !important;
+    left: 0% !important;
+    margin-left: -32px !important;
+    margin-top: -15px !important;
 }
