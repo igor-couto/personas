@@ -2,28 +2,23 @@
   min-height: 100vh;
   background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%);}
 
-.search-form{
+.search-form {
   min-height: 10vh;
   display:flex;
   justify-content: center;
   align-items: center;
 }
 
-.search-bar{
+.search-bar {
   border-radius: 25px;
   width: 30%;
   border:none;
   padding: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
-.search-button{
-  background: lightgray;
-  border: none;
-  padding: 10px 10px;
-  color: white;
-}
-
-.person{
+.personCard {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;

@@ -25,6 +25,7 @@ const Person = ({name, lastname, gender, origin, photo, wondering, feelLike, fla
             
             <p>Feeling like: {feelLike}</p>
             <p>Wondering: {wondering}</p>
+   
         </div>
     );
 };

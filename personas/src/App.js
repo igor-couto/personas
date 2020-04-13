@@ -38,8 +38,6 @@ const App = () =>
 
     setPeople(dataPeople.results);
     setShowingPeople(dataPeople.results);
-
-    console.log(dataPeople.results);
   };
 
   const updateSearch = event => {
@@ -64,7 +62,7 @@ const App = () =>
       <form className="search-form">
           <input className="search-bar" type="text" value={search} onChange={updateSearch} placeholder="Search someone"/>
       </form>
-      <div className = "person">
+      <div className = "personCard">
       {showingPeople.map( person => (
         <Person 
           key = {person.name.first + person.name.last}
