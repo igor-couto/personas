@@ -21,7 +21,7 @@ const App = () =>
 
     dataPeople.results.map( person => {
       const completeName = person.name.first + ' ' + person.name.last;
-      person.photo = `https://avatars.dicebear.com/v2/${person.gender}/${completeName}.svg?options[background][]=%2368e877`;
+      person.photo = `https://avatars.dicebear.com/v2/${person.gender}/${completeName}.svg?options[background][]=%2368e877&options[mood][]=happy`;
 
       person.flag = `https://hatscripts.github.io/circle-flags/flags/${person.nat.toLowerCase()}.svg`;
       //?options[background][]=%23d92518 red
@@ -60,7 +60,9 @@ const App = () =>
   return(
     <div className="App">
       <form className="search-form">
+        <label>
           <input className="search-bar" type="text" value={search} onChange={updateSearch} placeholder="Search someone"/>
+        </label>
       </form>
       <div className = "personCard">
       {showingPeople.map( person => (
