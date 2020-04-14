@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/personas/static/css/main.6d102d83.chunk.css",
+    "main.js": "/personas/static/js/main.5ba46d70.chunk.js",
+    "main.js.map": "/personas/static/js/main.5ba46d70.chunk.js.map",
+    "runtime-main.js": "/personas/static/js/runtime-main.fbdfd953.js",
+    "runtime-main.js.map": "/personas/static/js/runtime-main.fbdfd953.js.map",
+    "static/js/2.efaf986f.chunk.js": "/personas/static/js/2.efaf986f.chunk.js",
+    "static/js/2.efaf986f.chunk.js.map": "/personas/static/js/2.efaf986f.chunk.js.map",
+    "index.html": "/personas/index.html",
+    "precache-manifest.bc02f14f7fca1d1b6dd4042f52ea3672.js": "/personas/precache-manifest.bc02f14f7fca1d1b6dd4042f52ea3672.js",
+    "service-worker.js": "/personas/service-worker.js",
+    "static/css/main.6d102d83.chunk.css.map": "/personas/static/css/main.6d102d83.chunk.css.map",
+    "static/js/2.efaf986f.chunk.js.LICENSE.txt": "/personas/static/js/2.efaf986f.chunk.js.LICENSE.txt",
+    "static/media/female.svg": "/personas/static/media/female.72a7e13b.svg",
+    "static/media/male.svg": "/personas/static/media/male.ce65d9da.svg",
+    "static/media/search-icon.svg": "/personas/static/media/search-icon.f41f187d.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fbdfd953.js",
+    "static/js/2.efaf986f.chunk.js",
+    "static/css/main.6d102d83.chunk.css",
+    "static/js/main.5ba46d70.chunk.js"
+  ]
+}
