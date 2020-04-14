@@ -2,6 +2,8 @@
 
 Creates people randomly with some information about each one. What is it for? Do not know. It's just a small project to practice my react skills
 
+Hosted at: https://igor-couto.github.io/personas
+
 ![](preview/preview01.png)
 
 ### Prerequisites
@@ -14,8 +16,8 @@ Open your terminal, go inside src folder, type npm start and voilà. Should work
 
 ### Built With
 
-* [DiceBear Avatar](https://avatars.dicebear.com/) - Used to generate people's faces
-* [Bored API](https://www.boredapi.com/) - Used to generate people's activities
+* [DiceBear Avatar](https://avatars.dicebear.com) - Used to generate people's faces
+* [Bored API](https://www.boredapi.com) - Used to generate people's activities
 * [RandomUser](https://randomuser.me) - Used to generate people's information like name and origin
 
 ### Author
