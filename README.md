@@ -26,6 +26,6 @@ Open your terminal, go inside src folder, type npm start and voilà. Should work
 
 ### Acknowledgments
 
-* I would like to think of something else to do on this project in the future, but I can't think of anything right now
+* I would like to think of something else to do on this project in the future, but I can't think of anything right now.
 * Front-end is a new challenge for me and I am just learning react. If you see something incorrect or weird, please don't mind it.
-* I cannot guarantee the stability of the public APIs used in this project
+* I cannot guarantee the stability of the public APIs used in this project.
