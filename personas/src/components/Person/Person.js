@@ -2,7 +2,7 @@ import React from "react";
 import style from './Person.module.css';
 import MaleIcon from './male.svg';
 import FemaleIcon from './female.svg';
-import PersonLocation from "./PersonLocation";
+import PersonLocation from "../PersonLocation/PersonLocation";
 
 const Person = ({name, lastname, gender, origin, photo, wondering, feelLike, flag, state, city}) => {
     return(

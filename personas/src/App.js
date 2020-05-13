@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import Person from './Person';
+import Person from './components/Person/Person';
 import './App.css';
 import SearchIcon from './search-icon.svg';
 
